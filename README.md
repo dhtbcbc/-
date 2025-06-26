@@ -17,10 +17,9 @@
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            /* Existing orange gradient + new subtle black gradient on top */
             background: 
-                linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent), /* Subtle black gradient from bottom up */
-                linear-gradient(180deg, #ff8c00 0%, #ffa500 30%, #ffb84d 70%, #ffd700 100%); /* Original orange gradient */
+                linear-gradient(to top, rgba(0, 0, 0, 0.2), transparent),
+                linear-gradient(180deg, #ff8c00 0%, #ffa500 30%, #ffb84d 70%, #ffd700 100%);
             min-height: 100vh;
             padding: 30px 0;
             color: #000;
@@ -37,14 +36,14 @@
             padding: 0 20px;
             display: flex;
             flex-direction: column;
-            align-items: center; /* Center items horizontally */
-            text-align: center; /* Center text within the container */
+            align-items: center;
+            text-align: center;
         }
 
         .header {
             text-align: center;
             margin-bottom: 40px;
-            width: 100%; /* Ensure header takes full width */
+            width: 100%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -60,35 +59,33 @@
             font-family: 'Arial', sans-serif;
         }
 
-        /* الصورة الشخصية الجديدة */
+        /* الصورة الشخصية المعدلة بدون إطار */
         .profile-image {
-            width: 150px;
-            height: 150px;
+            width: 180px;
+            height: 180px;
             border-radius: 50%;
             object-fit: cover;
-            border: 4px solid white;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
             margin-bottom: 15px;
-            background-color: #fff;
-            padding: 5px;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
+            filter: brightness(1.05) contrast(1.1);
         }
 
         .profile-image:hover {
             transform: scale(1.05);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
         }
 
-        /* حاوية الصورة الكبيرة (بدلاً من الفيديو) */
+        /* حاوية الصورة الكبيرة */
         .image-container {
             width: 100%;
             margin-bottom: 40px;
             border-radius: 20px;
             overflow: hidden;
-            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
             position: relative;
             background: #000;
-            height: 280px; /* نفس ارتفاع الفيديو السابق */
+            height: 300px;
         }
 
         .image-container img {
@@ -96,11 +93,12 @@
             height: 100%;
             object-fit: cover;
             display: block;
-            transition: all 0.4s ease;
+            transition: all 0.5s ease;
+            filter: brightness(1.05) contrast(1.1);
         }
 
         .image-container:hover img {
-            transform: scale(1.05);
+            transform: scale(1.03);
         }
 
         .links-section {
@@ -108,7 +106,7 @@
             flex-direction: column;
             gap: 20px;
             margin-bottom: 30px;
-            width: 100%; /* Ensure links section takes full width */
+            width: 100%;
         }
 
         .link-button {
@@ -172,9 +170,9 @@
 
         /* Styling for Font Awesome icons */
         .platform-icon .fab {
-            font-size: 26px; /* Adjust size for Font Awesome icons */
+            font-size: 26px;
             filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
-            color: inherit; /* Ensure icon color matches button text */
+            color: inherit;
         }
 
         /* Platform-specific styling */
@@ -204,8 +202,6 @@
             padding-bottom: 15px; 
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             width: 100%;
-            /* Removed gradient from footer as it's now on the body */
-            /* Added consistent rounded corners for styling */
             border-radius: 15px; 
             overflow: hidden; 
         }
@@ -222,11 +218,11 @@
                 font-size: 36px;
             }
             .profile-image {
-                width: 130px;
-                height: 130px;
+                width: 160px;
+                height: 160px;
             }
             .image-container {
-                height: 220px;
+                height: 250px;
             }
             .link-button {
                 padding: 20px 25px;
@@ -243,14 +239,14 @@
 
         @media (max-width: 360px) {
             .image-container {
-                height: 200px;
+                height: 220px;
             }
             .title {
                 font-size: 32px;
             }
             .profile-image {
-                width: 110px;
-                height: 110px;
+                width: 140px;
+                height: 140px;
             }
             .link-button {
                 padding: 18px 20px;
@@ -269,16 +265,16 @@
 <body>
     <div class="container">
         <div class="header">
-            <!-- الصورة الشخصية الصغيرة في الأعلى -->
-            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1887&q=80" 
+            <!-- الصورة الشخصية بدون إطار -->
+            <img src="https://i.ibb.co/yFqXHcgJ/IMG-2578.jpg" 
                  alt="صورة كرار حيدر" 
                  class="profile-image">
             <h1 class="title">كرار حيدر</h1>
         </div>
 
-        <!-- هذا القسم كان فيديو وأصبح صورة كبيرة -->
+        <!-- الصورة الكبيرة في المنتصف -->
         <div class="image-container">
-            <img src="https://i.ibb.co/rRbgcwdf/image.jpg" alt="صورة كرار حيدر">
+            <img src="https://i.ibb.co/yFqXHcgJ/IMG-2578.jpg" alt="صورة كرار حيدر">
         </div>
 
         <div class="links-section">
