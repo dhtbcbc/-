@@ -96,6 +96,7 @@
             gap: 20px;
             margin-bottom: 30px;
             width: 100%;
+            align-items: center; /* توسيط الأزرار */
         }
 
         .link-button {
@@ -109,15 +110,15 @@
             text-decoration: none;
             color: #000;
             font-weight: 700;
-            font-size: 19px; /* زيادة حجم الخط */
+            font-size: 20px; /* زيادة حجم الخط */
             transition: all 0.4s ease;
-            /* زيادة بروز الظل */
             box-shadow: 0 6px 22px rgba(0, 0, 0, 0.15), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.8), 
                         inset 0 -1px 0 rgba(0, 0, 0, 0.1);
             position: relative;
             overflow: hidden;
             transform: translateZ(0);
+            width: 85%; /* تقليل طول الأزرار بنسبة 15% */
         }
 
         .link-button::before {
@@ -138,7 +139,6 @@
 
         .link-button:hover {
             transform: translateY(-5px) scale(1.02);
-            /* زيادة بروز الظل عند التحويم */
             box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.9), 
                         inset 0 -1px 0 rgba(0, 0, 0, 0.15);
@@ -146,7 +146,6 @@
 
         .link-button:active {
             transform: translateY(-2px) scale(1.01);
-            /* زيادة بروز الظل عند النقر */
             box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.7), 
                         inset 0 -1px 0 rgba(0, 0, 0, 0.2);
@@ -155,14 +154,14 @@
         .link-text {
             display: flex;
             align-items: center;
-            gap: 15px;
-            font-size: 19px; /* زيادة حجم الخط */
+            gap: 10px; /* تقليل المسافة بين الأيقونة والنص */
+            font-size: 20px; /* زيادة حجم الخط */
             text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         }
 
         /* Styling for Font Awesome icons */
         .platform-icon .fab {
-            font-size: 24px; /* زيادة حجم الأيقونات */
+            font-size: 25px; /* زيادة حجم الأيقونات */
             filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
             color: inherit;
         }
@@ -222,14 +221,15 @@
             }
             .link-button {
                 padding: 16px 22px;
-                font-size: 17px; /* تعديل حجم الخط للجوال */
+                font-size: 18px;
+                width: 85%; /* تقليل طول الأزرار في الجوال */
             }
             .link-text {
-                font-size: 17px; /* تعديل حجم الخط للجوال */
-                gap: 12px;
+                font-size: 18px;
+                gap: 8px; /* تقليل المسافة في الجوال */
             }
             .platform-icon .fab {
-                font-size: 22px; /* تعديل حجم الأيقونات للجوال */
+                font-size: 22px;
             }
         }
 
@@ -243,14 +243,15 @@
             }
             .link-button {
                 padding: 14px 18px;
-                font-size: 16px; /* تعديل حجم الخط للشاشات الصغيرة */
+                font-size: 16px;
+                width: 85%; /* تقليل طول الأزرار في الشاشات الصغيرة */
             }
             .link-text {
-                font-size: 16px; /* تعديل حجم الخط للشاشات الصغيرة */
-                gap: 10px;
+                font-size: 16px;
+                gap: 7px; /* تقليل المسافة في الشاشات الصغيرة */
             }
             .platform-icon .fab {
-                font-size: 20px; /* تعديل حجم الأيقونات للشاشات الصغيرة */
+                font-size: 20px;
             }
         }
     </style>
