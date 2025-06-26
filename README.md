@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>كرار حيدر </title>
+    <title>كرار حيدر</title>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
     <!-- Font Awesome for social media icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -53,52 +53,41 @@
             font-size: 42px;
             font-weight: 800;
             color: white;
-            margin-bottom: 15px;
-            margin-top: 20px;
-            text-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-bottom: 25px;
+            text-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
             font-family: 'Arial', sans-serif;
+            position: relative;
+            z-index: 2;
+        }
+
+        .title::after {
+            content: "";
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 2px;
         }
 
         /* الصورة الشخصية المعدلة بدون إطار */
         .profile-image {
-            width: 180px;
-            height: 180px;
+            width: 200px;
+            height: 200px;
             border-radius: 50%;
             object-fit: cover;
-            box-shadow: 0 12px 35px rgba(0, 0, 0, 0.4);
-            margin-bottom: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
             transition: all 0.4s ease;
-            filter: brightness(1.05) contrast(1.1);
+            border: 2px solid rgba(255, 255, 255, 0.3);
+            background: linear-gradient(45deg, #ff8c00, #ffd700);
+            padding: 4px;
         }
 
         .profile-image:hover {
             transform: scale(1.05);
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
-        }
-
-        /* حاوية الصورة الكبيرة */
-        .image-container {
-            width: 100%;
-            margin-bottom: 40px;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
-            position: relative;
-            background: #000;
-            height: 300px;
-        }
-
-        .image-container img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-            transition: all 0.5s ease;
-            filter: brightness(1.05) contrast(1.1);
-        }
-
-        .image-container:hover img {
-            transform: scale(1.03);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
         }
 
         .links-section {
@@ -198,12 +187,22 @@
             font-size: 16px;
             font-weight: 500;
             margin-top: 30px;
-            padding-top: 15px; 
-            padding-bottom: 15px; 
+            padding: 15px 25px;
             text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
             width: 100%;
             border-radius: 15px; 
-            overflow: hidden; 
+            background: rgba(0, 0, 0, 0.2);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Animation for title */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .title {
+            animation: fadeIn 1s ease-out;
         }
 
         /* Responsive adjustments */
@@ -218,11 +217,8 @@
                 font-size: 36px;
             }
             .profile-image {
-                width: 160px;
-                height: 160px;
-            }
-            .image-container {
-                height: 250px;
+                width: 180px;
+                height: 180px;
             }
             .link-button {
                 padding: 20px 25px;
@@ -238,15 +234,12 @@
         }
 
         @media (max-width: 360px) {
-            .image-container {
-                height: 220px;
-            }
             .title {
                 font-size: 32px;
             }
             .profile-image {
-                width: 140px;
-                height: 140px;
+                width: 160px;
+                height: 160px;
             }
             .link-button {
                 padding: 18px 20px;
@@ -265,16 +258,11 @@
 <body>
     <div class="container">
         <div class="header">
-            <!-- الصورة الشخصية بدون إطار -->
+            <h1 class="title">كرار حيدر</h1>
+            <!-- الصورة الشخصية فقط -->
             <img src="https://i.ibb.co/yFqXHcgJ/IMG-2578.jpg" 
                  alt="صورة كرار حيدر" 
                  class="profile-image">
-            <h1 class="title">كرار حيدر</h1>
-        </div>
-
-        <!-- الصورة الكبيرة في المنتصف -->
-        <div class="image-container">
-            <img src="https://i.ibb.co/yFqXHcgJ/IMG-2578.jpg" alt="صورة كرار حيدر">
         </div>
 
         <div class="links-section">
