@@ -102,16 +102,16 @@
             background: linear-gradient(145deg, #ffffff, #f0f0f0);
             border: none;
             border-radius: 25px;
-            padding: 22px 30px;
+            padding: 18px 25px; /* تم تقليل الحشو */
             display: flex;
             align-items: center;
             justify-content: center;
             text-decoration: none;
             color: #000;
             font-weight: 700;
-            font-size: 20px;
+            font-size: 18px; /* تم تصغير حجم الخط */
             transition: all 0.4s ease;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15), 
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.8), 
                         inset 0 -1px 0 rgba(0, 0, 0, 0.1);
             position: relative;
@@ -137,14 +137,14 @@
 
         .link-button:hover {
             transform: translateY(-5px) scale(1.02);
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2), 
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.9), 
                         inset 0 -1px 0 rgba(0, 0, 0, 0.15);
         }
 
         .link-button:active {
             transform: translateY(-2px) scale(1.01);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1), 
                         inset 0 1px 0 rgba(255, 255, 255, 0.7), 
                         inset 0 -1px 0 rgba(0, 0, 0, 0.2);
         }
@@ -152,15 +152,15 @@
         .link-text {
             display: flex;
             align-items: center;
-            gap: 18px;
-            font-size: 20px;
-            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+            gap: 15px; /* تم تقليل المسافة بين الأيقونة والنص */
+            font-size: 18px; /* تم تصغير حجم الخط */
+            text-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
         }
 
         /* Styling for Font Awesome icons */
         .platform-icon .fab {
-            font-size: 26px;
-            filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2));
+            font-size: 22px; /* تم تصغير حجم الأيقونات */
+            filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.1));
             color: inherit;
         }
 
@@ -187,12 +187,9 @@
             font-size: 16px;
             font-weight: 500;
             margin-top: 30px;
-            padding: 15px 25px;
-            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+            padding: 10px 0; /* تم تبسيط الحشو */
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
             width: 100%;
-            border-radius: 15px; 
-            background: rgba(0, 0, 0, 0.2);
-            backdrop-filter: blur(5px);
         }
 
         /* Animation for title */
@@ -221,15 +218,15 @@
                 height: 180px;
             }
             .link-button {
-                padding: 20px 25px;
-                font-size: 18px;
+                padding: 16px 22px;
+                font-size: 16px;
             }
             .link-text {
-                font-size: 18px;
-                gap: 15px;
+                font-size: 16px;
+                gap: 12px;
             }
             .platform-icon .fab {
-                font-size: 24px;
+                font-size: 20px;
             }
         }
 
@@ -242,15 +239,15 @@
                 height: 160px;
             }
             .link-button {
-                padding: 18px 20px;
-                font-size: 16px;
+                padding: 14px 18px;
+                font-size: 15px;
             }
             .link-text {
-                font-size: 16px;
-                gap: 12px;
+                font-size: 15px;
+                gap: 10px;
             }
             .platform-icon .fab {
-                font-size: 22px;
+                font-size: 18px;
             }
         }
     </style>
@@ -296,7 +293,7 @@
         </div>
 
         <div class="footer">
-            جميع الحقوق محفوظة 2024©️
+            جميع الحقوق محفوظة 2025©️ <!-- تم تغيير السنة -->
         </div>
     </div>
 </body>
